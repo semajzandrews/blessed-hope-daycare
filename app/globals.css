@@ -1,0 +1,147 @@
+@import "tailwindcss";
+
+/* ─────────────────────────────────────────────
+   Blessed Hope Daycare · Design Tokens
+   Lineage: Eric Carle picture-book gouache + Montessori
+   classroom card + early-learning workbook + warm
+   nursery-rhyme palette.  Soft, hand-drawn, trustworthy.
+   ───────────────────────────────────────────── */
+@theme {
+  /* Surfaces */
+  --color-milk:      #FBF5EA;   /* warm cream paper */
+  --color-milk-2:    #F4EBD8;
+  --color-cocoa:     #4B2D1A;   /* warm brown ink */
+  --color-cocoa-2:   #6F4A2E;
+  --color-cocoa-soft:#8E6B4D;
+
+  /* Brand */
+  --color-peach:     #F4A88B;   /* warm peach hug */
+  --color-sage:      #8FA585;   /* sage green leaves */
+  --color-sage-deep: #5F7A57;
+  --color-butter:    #F2C879;   /* buttercup highlight */
+  --color-terracotta:#C97455;   /* warm earthy accent */
+  --color-sky:       #B6D2D8;   /* gentle sky blue */
+  --color-blush:     #ECC9C2;   /* soft blush card */
+
+  /* Rules */
+  --color-rule:      #E2D2B8;
+  --color-rule-2:    #C9B391;
+
+  /* Fonts */
+  --font-display: "Fraunces", "DM Serif Display", Georgia, ui-serif, serif;
+  --font-body:    "Nunito", ui-sans-serif, system-ui, sans-serif;
+  --font-script:  "Caveat", "Patrick Hand", cursive;
+}
+
+@layer base {
+  :root {
+    --milk: #FBF5EA;
+    --milk-2: #F4EBD8;
+    --cocoa: #4B2D1A;
+    --cocoa-2: #6F4A2E;
+    --cocoa-soft: #8E6B4D;
+    --peach: #F4A88B;
+    --sage: #8FA585;
+    --sage-deep: #5F7A57;
+    --butter: #F2C879;
+    --terracotta: #C97455;
+    --sky: #B6D2D8;
+    --blush: #ECC9C2;
+    --rule: #E2D2B8;
+    --rule-2: #C9B391;
+  }
+
+  html, body {
+    background: var(--milk);
+    color: var(--cocoa);
+    font-family: var(--font-body);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  ::selection {
+    background: var(--peach);
+    color: var(--cocoa);
+  }
+}
+
+/* ─── Watercolor wash (subtle peach/sage on cream) ─────────────── */
+.wash {
+  background:
+    radial-gradient(ellipse 60% 40% at 15% 25%, rgba(244,168,139,0.18), transparent 70%),
+    radial-gradient(ellipse 50% 60% at 85% 75%, rgba(143,165,133,0.16), transparent 70%),
+    var(--milk);
+}
+
+/* ─── Storybook dots (random-feeling pattern of warm dots) ─────── */
+.storybook-dots {
+  background-image:
+    radial-gradient(rgba(143,165,133,0.18) 2px, transparent 2.5px),
+    radial-gradient(rgba(244,168,139,0.18) 1.5px, transparent 2px),
+    radial-gradient(rgba(242,200,121,0.16) 1.5px, transparent 2px);
+  background-size: 60px 60px, 90px 90px, 120px 120px;
+  background-position: 0 0, 30px 30px, 60px 60px;
+}
+
+/* ─── Crayon-rule (slightly imperfect divider) ─────────────────── */
+.crayon-rule {
+  height: 3px;
+  background: var(--cocoa);
+  border-radius: 999px;
+  opacity: 0.78;
+  position: relative;
+}
+.crayon-rule::after {
+  content: "";
+  position: absolute; inset: 0;
+  background: repeating-linear-gradient(
+    90deg,
+    transparent 0 12px,
+    rgba(255,255,255,0.25) 12px 14px
+  );
+  border-radius: 999px;
+}
+
+/* ─── Bloom (signature moment: petals expand in) ───────────────── */
+@keyframes bloom-expand {
+  from { transform: scale(0.4) rotate(-12deg); opacity: 0; }
+  to   { transform: scale(1) rotate(0deg); opacity: 1; }
+}
+.bloom-pop { animation: bloom-expand 1.4s cubic-bezier(0.34, 1.56, 0.64, 1) forwards; }
+
+/* ─── Gentle sway (used on leaves/elements that should feel alive) ── */
+@keyframes sway {
+  0%, 100% { transform: rotate(-3deg); }
+  50%      { transform: rotate(3deg); }
+}
+.sway { animation: sway 4s ease-in-out infinite; transform-origin: 50% 100%; }
+
+/* ─── Soft float (gentle vertical bob) ─────────────────────────── */
+@keyframes float-soft {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-6px); }
+}
+.float-soft { animation: float-soft 5s ease-in-out infinite; }
+
+/* ─── Heart-beat (very gentle, used sparingly) ─────────────────── */
+@keyframes heart-soft {
+  0%, 100% { transform: scale(1); }
+  20% { transform: scale(1.08); }
+  40% { transform: scale(1); }
+}
+.heart-soft { animation: heart-soft 3s ease-in-out infinite; transform-origin: 50% 50%; }
+
+/* ─── Tabular ────────────────────────────────────────────────── */
+.tabnum { font-variant-numeric: tabular-nums; }
+
+/* ─── Fonts ──────────────────────────────────────────────────── */
+.font-display { font-family: var(--font-display); font-weight: 500; letter-spacing: -0.015em; }
+.font-script  { font-family: var(--font-script); }
+
+/* ─── Card with deckle-edge feel ──────────────────────────────── */
+.deckle {
+  border-radius: 18px;
+  border: 1px solid var(--rule);
+  box-shadow:
+    0 1px 0 rgba(255,255,255,0.6) inset,
+    0 12px 24px -16px rgba(75,45,26,0.18);
+}
