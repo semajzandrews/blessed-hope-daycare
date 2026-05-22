@@ -7,7 +7,6 @@ const display = Fraunces({
   variable: "--font-display",
   subsets: ["latin"],
   weight: ["400", "500", "600"],
-  axes: ["opsz"],
 });
 
 const body = Nunito({
