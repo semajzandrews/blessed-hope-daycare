@@ -57,7 +57,7 @@ export default function Footer() {
 
         <div className="mt-6 flex flex-wrap items-center justify-between gap-4 text-[12px] text-cocoa-soft">
           <span>© {new Date().getFullYear()} Blessed Hope Daycare Center · Joyce Street · Orange, NJ 07050</span>
-          <span className="font-script text-base text-sage-deep">built · bysemaj.com</span>
+          <span className="font-script text-base text-sage-deep"><a href="https://bysemaj.com" target="_blank" rel="noreferrer" className="underline-offset-4 hover:underline transition-opacity hover:opacity-80">built · bysemaj.com</a></span>
         </div>
       </div>
     </footer>
