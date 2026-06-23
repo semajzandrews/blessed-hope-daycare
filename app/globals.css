@@ -115,6 +115,20 @@
 }
 .sway { animation: sway 4s ease-in-out infinite; transform-origin: 50% 100%; }
 
+/* ─── Per-arm sway: each leaf+stem flexes gently around its own joint ── */
+@keyframes sway-arm {
+  0%   { transform: rotate(0deg); }
+  25%  { transform: rotate(1.6deg); }
+  50%  { transform: rotate(0deg); }
+  75%  { transform: rotate(-1.6deg); }
+  100% { transform: rotate(0deg); }
+}
+.sway-arm { animation: sway-arm 6s ease-in-out infinite; }
+
+@media (prefers-reduced-motion: reduce) {
+  .sway, .sway-arm, .float-soft, .heart-soft { animation: none; }
+}
+
 /* ─── Soft float (gentle vertical bob) ─────────────────────────── */
 @keyframes float-soft {
   0%, 100% { transform: translateY(0); }
