@@ -32,29 +32,29 @@ function BloomArt() {
         stroke="#5F7A57" strokeWidth="6" fill="none" strokeLinecap="round"
       />
 
-      {/* Right arm: stem + leaf + bud flex together around the joint (215,280) */}
-      <g className="sway-arm" style={{ transformOrigin: "215px 280px" }}>
-        <path d="M 215 280 Q 260 260 290 230" stroke="#5F7A57" strokeWidth="4" fill="none" strokeLinecap="round" />
-        <path d="M 215 280 Q 250 250 290 230 Q 280 270 240 280 Z" fill="#8FA585" />
+      {/* Right arm: stem + leaf + bud flex together around the joint on the main-stem centerline (209,281) */}
+      <g className="sway-arm" style={{ transformOrigin: "207px 281px" }}>
+        <path d="M 205 281 Q 260 260 290 230" stroke="#5F7A57" strokeWidth="4" fill="none" strokeLinecap="round" />
+        <path d="M 205 282 Q 250 250 290 230 Q 280 270 240 280 Z" fill="#8FA585" />
         <g className="bloom-pop" style={{ transformOrigin: "290px 230px", animationDelay: "0.6s", opacity: 0 }}>
           <circle cx="290" cy="230" r="10" fill="url(#petalGrad2)" />
           <circle cx="290" cy="230" r="3" fill="#4B2D1A" />
         </g>
       </g>
 
-      {/* Left arm: stem + leaf + bud flex together around the joint (213,340) */}
-      <g className="sway-arm" style={{ transformOrigin: "213px 340px", animationDelay: "1.4s" }}>
-        <path d="M 213 340 Q 165 320 130 280" stroke="#5F7A57" strokeWidth="4" fill="none" strokeLinecap="round" />
-        <path d="M 213 340 Q 175 310 130 280 Q 145 320 195 340 Z" fill="#8FA585" />
+      {/* Left arm: stem + leaf + bud flex together around the joint on the main-stem centerline (206,340) */}
+      <g className="sway-arm" style={{ transformOrigin: "207px 340px", animationDelay: "1.4s" }}>
+        <path d="M 205 341 Q 165 320 130 280" stroke="#5F7A57" strokeWidth="4" fill="none" strokeLinecap="round" />
+        <path d="M 205 341 Q 175 310 130 280 Q 145 320 195 340 Z" fill="#8FA585" />
         <g className="bloom-pop" style={{ transformOrigin: "130px 280px", animationDelay: "0.9s", opacity: 0 }}>
           <circle cx="130" cy="280" r="10" fill="url(#petalGrad2)" />
           <circle cx="130" cy="280" r="3" fill="#4B2D1A" />
         </g>
       </g>
 
-      {/* Small upper leaf: its own faint flex around its joint (210,220) */}
-      <g className="sway-arm" style={{ transformOrigin: "210px 220px", animationDelay: "0.7s" }}>
-        <path d="M 210 220 Q 240 200 260 170 Q 250 210 220 220 Z" fill="#5F7A57" opacity="0.8" />
+      {/* Small upper leaf: its own faint flex around its joint on the main-stem centerline (217,221) */}
+      <g className="sway-arm" style={{ transformOrigin: "217px 221px", animationDelay: "0.7s" }}>
+        <path d="M 216 221 Q 240 200 260 170 Q 250 210 220 220 Z" fill="#5F7A57" opacity="0.8" />
       </g>
 
       {/* main bloom - 8 petals pop in around the center */}
