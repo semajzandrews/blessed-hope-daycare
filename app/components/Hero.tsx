@@ -173,7 +173,7 @@ export default function Hero() {
                 className="group relative inline-flex items-center gap-2 overflow-hidden rounded-full bg-cocoa px-6 py-3.5 text-sm font-bold text-milk transition-transform hover:-translate-y-0.5"
               >
                 <span className="relative h-1.5 w-1.5 rounded-full bg-peach heart-soft" />
-                Schedule a tour
+                Call to schedule a tour
                 <span className="transition-transform group-hover:translate-x-0.5">→</span>
               </a>
               <a
