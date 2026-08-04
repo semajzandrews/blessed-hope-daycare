@@ -1,3 +1,5 @@
+import CallOrText from "./CallOrText";
+
 export default function Footer() {
   return (
     <footer className="relative border-t border-rule-2 bg-milk-2 pt-14 pb-10">
@@ -41,12 +43,7 @@ export default function Footer() {
             <div className="text-[11px] font-bold uppercase tracking-[0.22em] text-sage-deep">
               Tours + enrollment
             </div>
-            <a
-              href="tel:+19736780098"
-              className="mt-4 block font-display text-3xl tracking-tight text-cocoa tabnum hover:text-peach"
-            >
-              (973) 678-0098
-            </a>
+            <CallOrText variant="inline" eyebrow="Call or text us" className="mt-4" />
             <div className="mt-2 text-[14px] text-cocoa-soft">
               Most afternoons after nap, around 3 PM.
             </div>

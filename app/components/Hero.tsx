@@ -1,4 +1,5 @@
 "use client";
+import CallOrText from "./CallOrText";
 
 import { motion } from "motion/react";
 
@@ -168,14 +169,7 @@ export default function Hero() {
               transition={{ duration: 0.9, delay: 0.7 }}
               className="mt-9 flex flex-wrap items-center gap-3"
             >
-              <a
-                href="tel:+19736780098"
-                className="group relative inline-flex items-center gap-2 overflow-hidden rounded-full bg-cocoa px-6 py-3.5 text-sm font-bold text-milk transition-transform hover:-translate-y-0.5"
-              >
-                <span className="relative h-1.5 w-1.5 rounded-full bg-peach heart-soft" />
-                Call to schedule a tour
-                <span className="transition-transform group-hover:translate-x-0.5">→</span>
-              </a>
+              <CallOrText eyebrow="Schedule a tour" />
               <a
                 href="#programs"
                 className="group inline-flex items-center gap-2 rounded-full border border-cocoa/30 px-6 py-3.5 text-sm font-semibold text-cocoa hover:bg-cocoa hover:text-milk"

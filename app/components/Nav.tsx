@@ -1,4 +1,5 @@
 "use client";
+import CallOrText from "./CallOrText";
 
 import { useEffect, useState } from "react";
 
@@ -71,13 +72,7 @@ export default function Nav() {
           ))}
         </nav>
 
-        <a
-          href="tel:+19736780098"
-          className="group inline-flex items-center gap-2 rounded-full bg-cocoa px-5 py-2.5 text-[13px] font-bold text-milk transition-transform hover:-translate-y-0.5"
-        >
-          <span className="relative h-1.5 w-1.5 rounded-full bg-peach heart-soft" />
-          Tour · (973) 678-0098
-        </a>
+        <CallOrText eyebrow="Tour" />
       </div>
     </header>
   );

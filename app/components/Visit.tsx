@@ -1,4 +1,5 @@
 "use client";
+import CallOrText from "./CallOrText";
 
 import { motion } from "motion/react";
 
@@ -64,14 +65,7 @@ export default function Visit() {
               </div>
             </div>
 
-            <a
-              href="tel:+19736780098"
-              className="mt-10 inline-flex items-center gap-3 rounded-full bg-cocoa px-7 py-4 text-sm font-bold text-milk transition-transform hover:-translate-y-0.5"
-            >
-              <span className="relative h-2 w-2 rounded-full bg-peach heart-soft" />
-              Call to schedule a tour
-              <span>→</span>
-            </a>
+            <CallOrText eyebrow="Schedule a tour" className="mt-10" />
           </motion.div>
 
           <motion.div
